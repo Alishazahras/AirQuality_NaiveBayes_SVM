@@ -24,11 +24,19 @@ Two classification methods were applied to the dataset:
 4. **F1-Score:** The harmonic mean of precision and recall, balancing both metrics.
 
 ## Results
-1. **Naive Bayes** showed moderate performance on both training and testing datasets, with an accuracy of 0.85 and an f1-score of 0.82 on the testing data.
-2. **Support Vector Machine (SVM)** significantly outperformed Naive Bayes, with a training accuracy of 1.00 and a testing accuracy of 0.95. The f1-score on the testing dataset was the highest among the models, making SVM the preferred model for this task.
-
+1. **Naive Bayes**
+   - Naive Bayes performed well with a training accuracy of 0.97 and a testing accuracy of 0.96.
+   - Class 0 had a slightly lower recall on both training (0.84) and testing (0.81) datasets, which indicates that the model missed some instances of this class.
+   - Precision for class 0 remained perfect at 1.00 across both datasets, indicating that false positives were minimized.
+   - The weighted averages for precision, recall, and f1-score were strong across both datasets, making Naive Bayes a viable option, though with some room for improvement in recall for class 0.
+2. **Support Vector Machine (SVM)**
+   - SVM achieved a training accuracy of 0.95 and a perfect testing accuracy of 1.00.
+   - The model performed exceptionally well on the testing dataset, achieving perfect precision, recall, and f1-score for both classes.
+   - While class 0 in the training dataset had a lower recall (0.81), the testing dataset showed significant improvement, with class 0 having a recall of 0.98.
+   - The overall performance of SVM, particularly in the testing phase, makes it the superior model for this task.
+     
 ## Conclusion
-Based on the results, Support Vector Machine (SVM) is the best model for predicting air quality in Yogyakarta, achieving near-perfect performance in both training and testing phases. Future work can focus on refining the model by incorporating more features or using real-time data to improve prediction accuracy.
+Based on the results, Support Vector Machine (SVM) is the best model for predicting air quality in Yogyakarta, achieving near-perfect performance in training phases and perfect perfomance in testing phases. Future work can focus on refining the model by incorporating more features or using real-time data to improve prediction accuracy.
 
 ## Technical Requirements
 The following Python libraries are required to run the project:
